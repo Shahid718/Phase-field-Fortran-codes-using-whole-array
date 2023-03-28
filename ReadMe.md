@@ -1,3 +1,5 @@
+![Fig](images/figure1.jpg)
+
 # **Whole array in Fortran**
 
 In Fortran, an array is a collection of elements of the same data type that are accessed using one or more indices. Whole array operations are a feature in Fortran that allow operations to be performed on entire arrays as a unit, rather than operating on individual elements one at a time.
