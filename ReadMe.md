@@ -66,7 +66,7 @@ The where statement is also a Fortran 90 standard to evaluate logical expression
 
 # **performance comparison**
 
-We compared two codes with and without compiler optimization. To take full advantage we used `-O3` compiler flag and observed an almost **50** % increase in speed for the whole array.
+We [compared](https://github.com/Shahid718/Phase-field-Fortran-codes-using-whole-array/tree/main/comparison) two codes with and without compiler optimization. To take full advantage we used `-O3` compiler flag and observed an almost **50** % increase in speed for the whole array.
 
 ## **Computational Tools**
 
@@ -91,4 +91,4 @@ The simulations were performed on the system with following details
 
 Our work shows that using whole-array operations in Fortran can help write faster, more concise, and more readable code, while taking advantage of hardware-specific optimizations and maintaining consistency with mathematical notation used in many scientific and engineering applications. 
 
-This demonstrates another benefit of using Fortran to translate formulas. Maybe this is the meaning of the term `Formula translation.`
+This demonstrates another benefit of using Fortran to translate formula. Maybe this is the meaning of the term `Formula translation.`
