@@ -1,4 +1,4 @@
-![Fig](images/figure1.jpg)
+![Fig](images/multi_dendrites.gif)
 
 # **Whole array in Fortran**
 
