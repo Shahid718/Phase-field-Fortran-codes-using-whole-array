@@ -1,6 +1,20 @@
+# **Fortran phase-field simulation with whole-arrays**
+
 ![Fig](images/multi_dendrites.gif)
 
-# **Whole array in Fortran**
+# **Introduction**
+This repository serves as an example of how phase-field models may be used with whole-arrays. The basic idea is presented under
+
+ * Whole-arrays in Fortran
+ * Advantages
+ * Fortran implementation
+ * Performance comparison
+ * Summary
+
+
+The Fortran whole-array is introduced in this document, along with its benefits over the index-array. The next section demonstrates how to use the whole arrays. We compare the performance of two codes and then sum up the concept. 
+
+## **Whole array in Fortran**
 
 In Fortran, an array is a collection of elements of the same data type that are accessed using one or more indices. Whole array operations are a feature in Fortran that allow operations to be performed on entire arrays as a unit, rather than operating on individual elements one at a time.
 
@@ -44,7 +58,7 @@ Whole-array operations are consistent with the high-level, mathematical notation
 
 By using whole-array operations, we can encapsulate complex operations into subroutines or functions, which can increase the modularity and reusability of our code.
 
-## **How to use it !**
+## **How to use it!**
 
 Below we show the code snippets that use array operations in **phase-field method**. In principle, it could be applied to any method . We choose **model A** because of its simplicity.
 
@@ -66,11 +80,11 @@ The where statement is also a Fortran 90 standard to evaluate logical expression
 
 ![evolution](images/evolution.jpg)
 
-# **performance comparison**
+## **Performance comparison**
 
 We [compared](https://github.com/Shahid718/Phase-field-Fortran-codes-using-whole-array/tree/main/comparison) two codes with and without compiler optimization. To take full advantage we used `-O3` compiler flag and observed an almost **50** % increase in speed for the whole array.
 
-## **Computational Tools**
+### **Computational Tools**
 
 The simulations were performed on the system with following details
 
@@ -93,4 +107,4 @@ The simulations were performed on the system with following details
 
 Our work shows that using whole-array operations in Fortran can help write faster, more concise, and more readable code, while taking advantage of hardware-specific optimizations and maintaining consistency with mathematical notation used in many scientific and engineering applications. 
 
-This demonstrates another benefit of using Fortran to translate formula. Maybe this is the meaning of the term `Formula translation.`
+This demonstrates another benefit of using Fortran to translate formula intuitively. Maybe this is the meaning of the term `Formula translation.`
