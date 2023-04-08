@@ -65,6 +65,7 @@ Below we show the code snippets that use array operations in **phase-field metho
 The left column calls intrinsic routine at each index to generate random numbers for the array. The next statement performs scalar and vector operations at each grid point to get fluctuations. In contrast, the whole array can get random numbers with a single statement. It also uses only one line to compute the scalar and vector operations (shown in `line 2`).
 
 ![initial](images/initial.jpg)
+![initial](images/whole_array.png)
 
 We can also see that the **whole array** code:
 
