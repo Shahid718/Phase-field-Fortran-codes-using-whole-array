@@ -12,11 +12,11 @@ This repository serves as an example of how phase-field models may be used with 
  * Summary
 
 
-The Fortran whole-array is introduced in this document, along with its benefits over the index-array. The next section demonstrates how to use the whole arrays. We compare the performance of two codes and then sum up the concept. 
+The Fortran whole-array is introduced in this document, along with its benefits over the index-array. The next section demonstrates how to use the whole array. We compare the performance of two codes and then sum up the concept. 
 
 ## **Whole array in Fortran**
 
-In Fortran, an array is a collection of elements of the same data type that are accessed using one or more indices. Whole array operations are a feature in Fortran that allow operations to be performed on entire arrays as a unit, rather than operating on individual elements one at a time.
+In Fortran, an array is a collection of elements of the same data type that are accessed using one or more indices. Whole array operations are a feature in Fortran that allows operations to be performed on entire arrays as a unit, rather than operating on individual elements one at a time.
 
 The concept of whole array operations was first introduced in the Fortran 90 standard. Prior to this, Fortran did not have a built-in mechanism for performing operations on entire arrays at once.
 
@@ -60,12 +60,11 @@ By using whole-array operations, we can encapsulate complex operations into subr
 
 ## **How to use it!**
 
-Below we show the code snippets that use array operations in **phase-field method**. In principle, it could be applied to any method . We choose **model A** because of its simplicity.
+Below we show the code snippets that use array operations in **phase-field method**. In principle, it could be applied to any method. We choose **model A** because of its simplicity.
 
-The left column calls intrinsic routine at each index to generate random numbers for the array. The next statement performs scalar and vector operations at each grid point to get fluctuations. In contrast, the whole array can get random numbers with a single statement. It also uses only one line to compute the scalar and vector operations (shown in `line 2`).
+The left column calls the intrinsic routine at each index to generate random numbers for the array. The next statement performs scalar and vector operations at each grid point to get fluctuations. In contrast, the whole array can get random numbers with a single statement. It also uses only one line (`line 2`) to compute the scalar and vector operations.
 
 ![initial](images/initial.jpg)
-
 
 We can also see that the **whole array** code:
 
@@ -73,21 +72,21 @@ We can also see that the **whole array** code:
 * uses less key strokes i.e. `(i,j)` for each array.
 * needs `no additional loop iterations data declaration`.
 
-We can extend the same idea in the evolution section. The mathematical equations to be evaluated are shown in the middle. It is quite clear how easy and intuitive it is to write derivative of free energy with the whole array operation. 
+We can extend the same idea in the evolution section. The mathematical equations to be evaluated are shown in the middle. It is quite clear how easy and intuitive it is to write a derivative of free energy with the whole array operation. 
 
 The time integration equation encapsulates `Laplacian` function `( defined somewhere in the code)` and makes it easy to handle the complexity in the code. 
 
-The where statement is also a Fortran 90 standard to evaluate logical expression in an array.
+The where statement is also a Fortran 90 standard to evaluate a logical expression in an array.
 
 ![evolution](images/evolution.jpg)
 
 ## **Performance comparison**
 
-We [compared](https://github.com/Shahid718/Phase-field-Fortran-codes-using-whole-array/tree/main/comparison) two codes with and without compiler optimization. To take full advantage we used `-O3` compiler flag and observed an almost **50** % increase in speed for the whole array.
+We [compared](https://github.com/Shahid718/Phase-field-Fortran-codes-using-whole-array/tree/main/comparison) two codes with and without compiler optimization. To take full advantage we used the `-O3` compiler flag and observed an almost **50** % increase in speed for the whole array.
 
 ### **Computational Tools**
 
-The simulations were performed on the system with following details
+The simulations were performed on the system with the following details
 
 > Processor :   Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz   2.30 GHz
 
@@ -106,6 +105,6 @@ The simulations were performed on the system with following details
 
 ## **Takeaway**
 
-Our work shows that using whole-array operations in Fortran can help write faster, more concise, and more readable code, while taking advantage of hardware-specific optimizations and maintaining consistency with mathematical notation used in many scientific and engineering applications. 
+Our work shows that using whole-array operations in Fortran can help write faster, more concise, and more readable code while taking advantage of hardware-specific optimizations and maintaining consistency with mathematical notation used in many scientific and engineering applications. 
 
-This demonstrates another benefit of using Fortran to translate formula intuitively. Maybe this is the meaning of the term `Formula translation.`
+This demonstrates another benefit of using Fortran to translate formulas intuitively. Maybe this is the meaning of the term `Formula translation.`
