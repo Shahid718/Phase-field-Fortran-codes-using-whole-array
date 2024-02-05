@@ -9,7 +9,7 @@
 !               Shahid Maqbool
 !
 !   Modified   :
-!                    29 March 2022
+!                    29 March 2023
 !
 !   To compile and run :
 !                            check ReadMe file
@@ -31,14 +31,14 @@ program fd_ch_test
   real ( kind = 8 )    :: dt = 0.01 , start , finish
   real ( kind = 8 )    :: c0 = 0.4 , mobility = 1.0 , grad_coef = 0.5
   real ( kind = 8 )    :: noise = 0.02 , A = 1.0
-  real ( kind = 8 ), dimension ( Nx, Ny ) :: r, con, dfdcon, lap_con, dummy_con
+  real ( kind = 8 ), dimension ( Nx, Ny ) :: r, con, dfdcon, dummy_con
 
 
   call cpu_time ( start )
 
 
   ! ===========================================================================
-  !                            initial microstucture
+  !                            initial microstructure
   ! ===========================================================================
 
 
