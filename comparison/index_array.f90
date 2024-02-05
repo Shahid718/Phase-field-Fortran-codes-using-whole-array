@@ -9,7 +9,7 @@
 !               Shahid Maqbool
 ! 
 !   Modified   :
-!                    29 March 2022
+!                    29 March 2023
 !
 !   To compile and run :
 !                            check ReadMe file
@@ -90,12 +90,13 @@ program fd_ch_test
         con(i,j) =  con(i,j) + dt*mobility*lap_dummy(i,j)
 
 
+        ! adjust concentration in range
+
+        if ( con(i,j) >= 0.99999 )  con(i,j) = 0.99999
+        if ( con(i,j) < 0.00001 )   con(i,j) = 0.00001
+
+     
      end do
-
-     ! adjust concentration in range
-
-     if ( con(i,j) >= 0.99999 )  con(i,j) = 0.99999
-     if ( con(i,j) < 0.00001 )   con(i,j) = 0.00001
 
 
   end do time_loop
