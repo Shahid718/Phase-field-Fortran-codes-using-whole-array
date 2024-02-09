@@ -1,4 +1,3 @@
-
 !      
 !   Whole array Finite Difference Phase Field Code of Allen-Cahn Equation.
 !
