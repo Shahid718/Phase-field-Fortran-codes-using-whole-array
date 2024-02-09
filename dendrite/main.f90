@@ -1,4 +1,3 @@
-
 !      
 !   Whole array Finite Difference Phase Field Code of Dendrite Solidification.
 !
@@ -28,7 +27,7 @@ program fd_Kobayashi_model_test
   integer ( kind = 4 ), parameter :: Nx = 300 , Ny = 300 
   integer (kind = 4 ) :: nsteps = 2500 , nprint = 100 , istep
   real ( kind = 8 )   :: dtime  = 1.0e-4, start , finish, dx = 0.03 , dy = 0.03
-  real ( kind = 8 )   :: tau   = 0.0003 , epsilonb = 0.01 , mu = 1.0
+  real ( kind = 8 )   :: tau   = 0.0003 , epsilonb = 0.01 
   real ( kind = 8 )   :: kappa = 1.8 , delta = 0.02 , aniso = 6.0 , alpha = 0.9
   real ( kind = 8 )   :: gama  = 10.0 , teq   = 1.0 , theta0= 0.2
   real ( kind = 8 )   :: pix   = 4.0*atan(1.0), phi_old, term1, term2, theta, m
