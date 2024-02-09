@@ -1,4 +1,3 @@
-
 !      
 !   Whole array finite Difference Phase Field Code of Cahn-Hilliard Eq.
 !
@@ -96,7 +95,7 @@ contains
 
     real ( kind = 8 ), dimension ( Nx, Ny ), intent ( in )  :: con_ 
     real ( kind = 8 ), dimension ( Nx, Ny ) :: Laplacian
-    integer ( kind = 4 ) :: i , j, jp, jm, ip, im, dx = 1, dy = 1
+    integer ( kind = 4 ) :: i, j, jp, jm, ip, im, dx = 1, dy = 1
 
 
     do concurrent ( i = 1:Nx, j = 1:Ny )
