@@ -1,4 +1,3 @@
-
 !      
 !   Indexed array finite Difference Phase Field Code of Cahn-Hilliard Equation.
 !
