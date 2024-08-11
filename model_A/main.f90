@@ -108,7 +108,8 @@ contains
     integer ( kind = 4 ) :: i , j, jp, jm, ip, im , dx = 2, dy = 2
 
 
-    do concurrent ( i = 1 : Nx, j= 1 : Ny )
+    do i = 1, Nx
+       do j = 1, Ny
 
        jp = j + 1
        jm = j - 1
@@ -124,7 +125,7 @@ contains
        Laplacian(i,j) = ( phi_(ip,j) + phi_(im,j) + phi_(i,jm) + &
             phi_(i,jp) - 4.0*phi_(i,j))  / ( dx*dy )              
 
-
+       end do
     end do
 
 
