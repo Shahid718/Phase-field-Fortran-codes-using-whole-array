@@ -139,7 +139,8 @@ contains
     integer ( kind = 4 ) :: i , j, jp, jm, ip, im , dx = 1, dy = 1
 
 
-    do concurrent ( i = 1 : Nx, j= 1 : Ny )
+    do i = 1, Nx
+       do j = 1, Ny
 
        jp = j + 1
        jm = j - 1
@@ -156,7 +157,7 @@ contains
             order_parameter(i,jm) + order_parameter(i,jp) - &
             4.0*order_parameter(i,j))  / ( dx*dy )              
 
-
+       end do
     end do
 
 
