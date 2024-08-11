@@ -62,7 +62,8 @@ program fd_ch_test
 
   time_loop: do istep = 1, nsteps
 
-     do concurrent ( i = 1:Nx, j = 1:Ny )
+     do i = 1, Nx
+        do j = 1, Ny
 
         dfdcon(i,j) = A*( 2.0*con(i,j)*( 1.0 - con(i,j) )**2 &
              - 2.0*con(i,j)**2*( 1.0 - con(i,j) ) )
@@ -96,7 +97,7 @@ program fd_ch_test
 
      
      end do
-
+  end do
 
   end do time_loop
 
