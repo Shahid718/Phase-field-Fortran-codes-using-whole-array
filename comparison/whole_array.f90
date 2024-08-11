@@ -98,7 +98,8 @@ contains
     integer ( kind = 4 ) :: i, j, jp, jm, ip, im, dx = 1, dy = 1
 
 
-    do concurrent ( i = 1:Nx, j = 1:Ny )
+     do i = 1, Nx
+        do j = 1, Ny
 
           jp = j + 1
           jm = j - 1
@@ -115,9 +116,9 @@ contains
           Laplacian(i,j) = ( con_(ip,j) + con_(im,j) + con_(i,jm) + &
                & con_(i,jp) - 4.0*con_(i,j) ) / ( dx*dy )
 
-
-    end do
-
+        end do
+     end do
+  
   end function Laplacian
 
 
