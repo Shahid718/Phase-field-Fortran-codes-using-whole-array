@@ -111,23 +111,24 @@ contains
     integer ( kind = 4 ) :: i , j, jp, jm, ip, im, dx = 1, dy = 1
 
 
-    do concurrent ( i = 1:Nx, j = 1:Ny )
+    do i = 1, Nx
+       do j = 1, Ny
 
-          jp = j + 1
-          jm = j - 1
+       jp = j + 1
+       jm = j - 1
 
-          ip = i + 1
-          im = i - 1
+       ip = i + 1
+       im = i - 1
 
-          if ( im == 0 ) im = Nx
-          if ( ip == ( Nx + 1 ) ) ip = 1
-          if ( jm == 0 ) jm = Ny
-          if ( jp == ( Ny + 1 ) ) jp = 1
+       if ( im == 0 ) im = Nx
+       if ( ip == ( Nx + 1 ) ) ip = 1
+       if ( jm == 0 ) jm = Ny
+       if ( jp == ( Ny + 1 ) ) jp = 1
 
-          Laplacian(i,j) = ( con_(ip,j) + con_(im,j) + con_(i,jm) + &
-               & con_(i,jp) - 4.0*con_(i,j) ) / ( dx*dy )
+       Laplacian(i,j) = ( phi_(ip,j) + phi_(im,j) + phi_(i,jm) + &
+            phi_(i,jp) - 4.0*phi_(i,j))  / ( dx*dy )              
 
-
+       end do
     end do
 
 
