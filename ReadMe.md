@@ -64,7 +64,7 @@ Below we show the code snippets that use array operations in **phase-field metho
 
 The left column calls the intrinsic routine at each index to generate random numbers for the array. The next statement performs scalar and vector operations at each grid point to get fluctuations. In contrast, the whole array can get random numbers with a single statement. It also uses only one line (`line 2`) to compute the scalar and vector operations.
 
-![initial](images/initial.jpg)
+![initial](images/initial.svg)
 
 We can also see that the **whole array** code:
 
@@ -78,7 +78,7 @@ The time integration equation encapsulates `Laplacian` function `( defined somew
 
 The where statement is also a Fortran 90 standard to evaluate a logical expression in an array.
 
-![evolution](images/evolution.jpg)
+![evolution](images/evolution.svg)
 
 ## **Performance comparison**
 
