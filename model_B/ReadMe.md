@@ -4,7 +4,7 @@ This work shows the whole array technique for simulation of Cahn-Hilliard equati
 
 Cahn-Hilliard simulation represents a code where the whole array technique can be used in both sections: initial microstructure and the evolution section (also discussed in the introduction). The flow chart below demonstrates this.
 
-![flow_chart](images/flow_chart.jpg)
+![flow_chart](images/flowchart.svg)
 
 The `laplacian` function is defined in the `subprogram` section together with the `Dislin_color_animation()`.
 
