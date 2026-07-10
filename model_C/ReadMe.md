@@ -4,7 +4,7 @@ This work shows the whole array technique for model C phase field method.
 
 Model C represents a code where the whole array technique can be used in both sections: initial microstructure and the evolution section ( indexed array are however still needed to insert the initial nucleus of desired radius ). The flow chart below demonstrates this.
 
-![flow_chart](images/flow_chart.jpg)
+![flow_chart](images/flowchart.svg)
 
 The `laplacian` function is defined in the `subprogram` section together with the `Dislin_color_animation()`.
 
